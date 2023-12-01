@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", function () {
     return view('pages.blog');
 })->name('blog');
+
+Route::get("language/{lang}", function ($lang) {
+    if (in_array($lang, config('app.locales'))) {
+        session()->put('language', $lang);
+    }
+    return redirect()->back();
+})->name('lang');

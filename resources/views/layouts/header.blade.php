@@ -6,9 +6,9 @@
         <x-navlink url="acount" text="{{__('navlink.acount')}}" />
     </div>
     <div>
-        <select class="py-1 px-4 outline-none bg-slate-800 rounded-md text-slate-100 text-lg font-bold">
+        <select onchange="window.location.href=this.value" class="py-1 px-4 outline-none bg-slate-800 rounded-md text-slate-100 text-lg font-bold">
             @foreach(config('app.locales') as $locale)
-            <option {{app()->getlocale()==$locale ? 'selected' : ''}}>{{$locale}}</option>
+            <option value="{{route('lang',$locale)}}" {{app()->getlocale()==$locale ? 'selected' : ''}}>{{$locale}}</option>
             @endforeach
         </select>
     </div>

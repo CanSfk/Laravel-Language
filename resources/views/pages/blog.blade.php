@@ -3,7 +3,7 @@
 @section('title','My Blog')
 
 @php
-$jsonFile = base_path('database\db.json');
+$jsonFile = public_path('db.json');
 $jsonData=json_decode(file_get_contents($jsonFile), true);
 $data=$jsonData['blogPost'];
 
