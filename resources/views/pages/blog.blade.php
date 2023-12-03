@@ -13,7 +13,7 @@ $lang=app()->getLocale();
 
 @section('content')
 
-<div class="flex flex-col gap-14 w-[90%]">
+<div class="flex flex-col gap-14">
     @foreach($data as $value)
     <x-blog-post time="{{$value['time']}}" color="bg-green-500" title="{{$value['title'][$lang]}}" description="{{$value['description'][$lang]}}" />
     @endforeach

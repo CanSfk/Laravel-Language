@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+    .active {
+        right: 0 !important;
+    }
+
+    .activeScreen {
+        visibility: visible !important;
+        opacity: 0.5 !important;
+    }
+}
